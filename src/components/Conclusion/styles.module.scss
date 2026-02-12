@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+ .Conclusion{
+    font-family: $font-amatic;
+    &_title{
+        position: relative;
+        font-size: clamp(3rem, 12vw, 6rem);
+        text-align: center;
+        font-weight: normal;
+    }
+    &_subtitle{
+        display: block;
+        font-size: clamp(1rem, 4vw, 1.8rem);
+        text-align: center;
+        transform: translate(0, -50%);
+    }
+}

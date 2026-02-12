@@ -1,0 +1,101 @@
+@import '../../variables.scss';
+
+.MainView {
+    width: 100%;
+    margin-bottom: clamp(100px, 20vw, 150px);
+    
+    font-family: $font-caveat;
+    color: $main-green;
+    
+    &_flex_wrap{
+        position: relative;
+        z-index: 1;
+        
+        width: 100%;
+        
+        border-radius: 8% / 18%;
+        
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            padding: clamp(20px, 3vw, 40px);
+            
+            background-color: $card-green;
+        }
+    }
+
+    &_photo{
+        
+        &_box{            
+            @media (min-width: 768px){
+                max-width: 38%;
+                
+                padding: 20px 0;
+                margin-right: clamp(15px, 2vw, 25px);
+                
+                background-color: $background;
+                
+                border-radius: 15% / 13%;
+                box-shadow: inset 0px 0px clamp(5px, 0.7vw, 10px) 0px $dark-green;
+            }
+        }
+        
+        &_img{
+            width: 100%;
+            object-fit: contain;
+        }
+        
+        &_line{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 200%;
+            z-index: -1;
+            
+            &_top{
+                top: 0;
+                transform: translate(-50%, -50%) rotateY(180deg) rotateZ(5deg);
+            }   
+            
+            &_bottom{
+                transform: translate(-50%, 75%) rotate(10deg);
+            } 
+            
+            @media (min-width: 768px){
+                width: 90%;
+                
+                &_top{
+                    top: 20px;
+                    transform: translate(-50%, 0%) rotateY(180deg) rotateZ(5deg);
+                }
+                
+                &_bottom{
+                    transform: translate(-50%, 0%) rotate(10deg);
+                }
+            }
+        }
+    }
+    
+    &_text{
+        display: none;
+                
+        text-align: left;
+        font-size: clamp(1rem, 2.62vw, 2.2rem);
+        color: $background;
+        
+        @media (min-width: 768px) {
+            display: block;
+            padding: 0 10px;
+        }
+        
+        &_modifier{
+            font-size: 1.2em;
+            color: $normal-pink;
+            text-wrap: nowrap;
+            
+            text-transform: capitalize;
+        }
+    }
+}

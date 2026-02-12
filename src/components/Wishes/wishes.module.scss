@@ -1,0 +1,87 @@
+@import "../../variables.scss";
+
+.Wishes{
+    margin-bottom: clamp(100px, 20vw, 150px);
+    
+    &_wishList{
+        display: inline-block;
+        font-size: 1.6em;
+        font-family: $font-caveat;
+        text-transform: lowercase;
+        text-align: right;
+        color: $main-green;
+    }
+    
+    &_list{
+        position: relative;
+        top: 0;
+        left: 50%;
+        
+        transform: translate(-50%, 0);
+        
+        display: flex;
+        flex-direction: column;
+        gap: clamp(30px, 6vw, 100px);
+        
+        width: min(130%, 100vw);
+        
+        margin-top: 80px;
+
+        &_item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: clamp(0.8rem, 2.8vw, 2.5rem);
+            
+            padding: 0 20px;
+            
+            font-family: $font-advent;
+            
+            &:nth-child(even){
+                flex-direction: row-reverse;
+                text-align: right;
+            }
+        }
+    }
+    
+    &_text{
+        width: 70%;
+        
+        &_modifier{
+            color: $dark-pink;
+            font-family: $font-caveat;
+            font-size: 1.3em;
+            text-transform: uppercase;
+        }
+        
+        &_nowrap{
+            text-wrap: nowrap;
+        }
+    }
+    
+    &_number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-right: 5%;
+        margin-left: 5%;
+        
+        aspect-ratio: 1 / 1;
+        
+        width: clamp(80px, 21vw, 150px);
+        max-width: 20%;
+        
+        border: 1px solid $card-green;
+        border-radius: 80% 50% 40% 70% / 70% 60% 60% 50%;
+        
+        font-family: $font-caveat;
+        font-weight: 400;
+        font-size: 3em;
+        
+        @media(min-width: 768px){
+            border: 2px solid $card-green;
+            font-weight: 600;
+        }
+    }
+}

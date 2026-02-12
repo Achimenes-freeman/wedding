@@ -1,0 +1,89 @@
+@import '../../variables.scss';
+
+.Calendar{
+    position: relative;
+    
+    &_items{
+        position: relative;
+        top: 0;
+        left: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 120%;
+        
+        margin-bottom: 50px;
+        
+        border: 2px solid $dark-green;
+        border-radius: 1.5% / 10%;
+        
+        transform: translate(-50%, 0%);
+        
+        @media(min-width: 768px){
+            width: 130%;
+            margin-bottom: 100px;
+        }
+    }
+    
+    &_item{        
+        width: 34%;
+        font-family: $font-advent;
+        text-align: center;
+        
+        &_header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            padding-bottom: 4px;
+            
+            border-bottom:  2px solid $dark-green;
+            border-left:    2px solid $dark-green;
+            
+            &_text{
+                line-height: 1;
+                font-size: clamp(2rem, 4vw, 3rem);
+                text-transform: lowercase;
+                text-align: center;
+            }
+        }
+        
+        &:first-child > &_header {
+            border-left: none;
+        }
+        
+        &_body{
+            padding-top: 10px;
+            border-left: 2px solid $dark-green;
+        }
+        
+        &:first-child > &_body {
+            border-left: none;
+        }
+        
+        &_subtitle{
+            font-size: clamp(1rem, 2.5vw, 1.8rem)
+        }
+        
+        &_date{
+            line-height: 1;
+            font-size: clamp(5rem, 13vw, 10rem);
+        }
+    }
+    
+    &_decoration{
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%) scale(1.5);
+        
+        height: 100%;
+        
+        &_circle_img{
+            height: 100%;
+        }
+    }
+}

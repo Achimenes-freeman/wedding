@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.DateSplitter{
+    margin: clamp(30px, 12vw, 90px) 0 clamp(70px, 12vw, 150px);
+    opacity: 0.3;
+    
+    &:last-child{
+         margin: clamp(30px, 12vw, 90px) 0 clamp(30px, 6vw, 70px);
+    }
+    
+    &_date{
+        font-family: $font-advent;
+        font-weight: 700;
+        font-size: clamp(2.5rem, 10vw, 5.5rem);
+        text-align: center;   
+    }
+    
+    &_flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        & > .DateSplitter_date{
+            margin-inline: clamp(5px, 1vw, 10px);
+            font-size: clamp(1rem, 2vw, 2rem);
+        
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+

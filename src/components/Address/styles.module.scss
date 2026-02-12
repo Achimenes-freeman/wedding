@@ -1,0 +1,147 @@
+@import '../../variables.scss';
+
+.Address{
+    font-family: $font-advent;
+    margin-bottom: clamp(70px, 15vw, 100px);
+    
+    &_content{
+        position: relative;
+        margin-bottom: 50px;
+        
+        @media (min-width: 768px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            border-radius: 8% / 18%;
+            
+            padding: clamp(20px, 3vw, 40px);
+            
+            background-color: $card-green;
+        }
+        
+        &_line{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 200%;
+            
+            display: none;
+            
+            @media (min-width: 768px){
+                display: block;
+                
+                width: 90%;
+                
+                &_top{
+                    top: 20px;
+                    transform: translate(-50%, 0%) rotateY(180deg) rotateZ(0deg);
+                }
+                
+                &_bottom{
+                    transform: translate(-50%, 0%) rotate(0deg);
+                }
+            }
+        }
+    }
+    
+    &_text{
+        font-size: clamp(1.2rem, 4.6vw, 2.8rem);
+        line-height: 1.2;
+        text-align: center;
+        
+        @media (min-width: 768px){
+            font-size: clamp(1.4rem, 2.9vw, 2.4rem);
+            text-align: left;
+            color: $background;
+        }
+        
+        &_wrap{
+            margin-bottom: 70px;
+                
+            @media (min-width: 768px){
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+        
+        &_modifier{
+            font-size: 0.9em;
+            font-weight: 500;
+            
+            &_place{
+                font-family: $font-amatic;
+                font-weight: 700;
+                font-size: 2em;
+                text-transform: uppercase;
+                color: $dark-pink;
+                
+                letter-spacing: 6px;
+                @media (min-width: 768px)
+                {
+                    color: $normal-pink
+                }
+            }
+            
+            &_address{
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    &_image{
+        display: block;
+        height: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+        
+        &_box{
+            position: relative;
+            
+            width: 100%;
+            
+            margin: 0 auto;
+            
+            @media (min-width: 768px){
+                position: relative;
+                z-index: 1;
+                
+                max-width: 38%;
+                
+                padding: 20px 20px;
+                margin-left: clamp(15px, 2vw, 25px);
+                
+                background-color: $background;
+                
+                border-radius: 13% / 13%;
+                box-shadow: inset 0px 0px clamp(5px, 0.7vw, 10px) 0px $dark-green;
+                
+                overflow: hidden;
+            }
+        }
+        
+        &_background{
+            display: block;
+                
+            position: absolute;
+            top: 50%;
+            left: 50%;
+                
+            z-index: -1;
+                
+            background: url('/public/utils/WAITING-mini.png');
+            background-repeat: repeat;
+                
+            width: 1000px;
+            height: 110%;
+                
+            transform: translate(-50%, -50%) rotate(3deg);
+            opacity: 0.5;
+            
+            @media (min-width: 480px) and (max-width: 767px){
+                background: url('/public/utils/WAITING-mtx.png');
+            }
+        }
+    }
+}

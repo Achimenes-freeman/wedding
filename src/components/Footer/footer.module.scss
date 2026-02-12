@@ -1,0 +1,87 @@
+@import "../../variables.scss";
+
+.Footer{
+    position: relative;
+    padding: 0;
+    
+    height: clamp(170px, 40vw, 500px);
+    
+    &_backdrop{
+        position: relative;
+        
+        top: 0;
+        left: 50%;
+        
+        transform: translate(-50%, 0);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100vw;
+        height: 100%;
+       
+        border-top: 2px $dark-pink solid;
+        border-bottom: 2px $dark-pink solid;
+        
+        @media(min-width: 768px){
+            border-top: 4px $dark-pink solid;
+            border-bottom: 4px $dark-pink solid;
+        }
+
+    }
+    
+    &_content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+        
+        z-index: -2;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        height: 100%;
+        
+        background: $dark-pink;
+    }
+    
+    &_text{
+        font-size: clamp(1.2rem, 4.6vw, 4rem);
+        color: $main-green;
+        font-weight: 700;
+        
+        background-color: $background;
+        width: 100%;
+        text-align: center;
+        
+        line-height: 1.3;
+        
+        &_wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            flex-direction: column;
+            
+            width: 100%;
+            height: 100%;
+                    
+            background-color: $dark-pink-alpha;
+        }
+    }
+    
+    &_image{
+        width: 100%;
+        object-fit: contain;
+        
+        &_box{
+            height: 63%;
+            aspect-ratio: 1 / 1;  
+        }  
+    }
+}

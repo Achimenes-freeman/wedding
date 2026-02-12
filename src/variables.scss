@@ -1,0 +1,32 @@
+// Fonts -------------------------
+$font-caveat: 'Caveat', sans-serif; 
+$font-advent: 'Advent Pro', sans-serif; 
+$font-amatic: 'Amatic SC', sans-serif; 
+
+// Colors ------------------------
+$dark-green: #5f6251;
+$dark-green-alpha: #5f625180;
+$normal-green: #8d8e7c;
+$card-green: #8a885f;
+$card-green-alpha: #8a885fa1;
+$dark-pink: #b08980;
+$dark-pink-alpha: #b0898050;
+$normal-pink: #efbfbb;
+$light-pink: #ffe5e4;
+$background: #f1ece6;
+$main-green: #727249;
+$main-green-alpha: #727249c9;
+
+.container{
+    max-width: 1280px;
+    padding: 0 10px;
+    margin: 0 auto;
+    
+    @media (min-width: 768px){
+        padding: 0 clamp(20px, 0.3vw, 30px);
+    }
+}
+
+body.scroll_disable{
+    overflow: hidden;
+}
